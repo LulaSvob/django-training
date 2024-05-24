@@ -23,7 +23,21 @@
             </button>
         </form>
 
-        Searching for {{ search_term }}
+        <p>Searching for {{ search_term }}</p>
+
+        {% for movie in movies %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{movie.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }} </h5>
+                <p class="card-text"> {{ movie.description }} </p>
+                {% if movie.url %}
+                <a href="{{movie.url}}" class="btn btn-primary">Movie Link</a>
+                {% endif %}
+
+            </div>
+        </div>
+        {% endfor %}
 
         <br />
         <br />

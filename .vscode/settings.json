@@ -1,4 +1,11 @@
 {
-    "sqltools.connections": [],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:django-training}/moviereviewsproject/db.sqlite3",
+            "name": "django-training"
+        }
+    ],
     "sqltools.useNodeRuntime": true
 }
