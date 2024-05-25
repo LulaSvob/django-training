@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'movie',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'moviereviews',
+#         'USER': 'root',  # your MySQL username
+#         'PASSWORD': '',  # your MySQL password (empty if not set)
+#         'HOST': 'localhost',  # set to empty string for localhost
+#         'PORT': '3306',  # set to empty string for default
+#     }
+# }
 
 
 # Password validation
