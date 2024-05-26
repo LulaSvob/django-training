@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import redirect
 from django.db import IntegrityError
+from django.contrib.auth.decorators import login_required
 
 
 def signupaccount(request):
@@ -38,6 +39,7 @@ def signupaccount(request):
             )
 
 
+@login_required
 def logoutaccount(request):
     logout(request)
     return redirect("home")
